@@ -13,9 +13,12 @@
 		3825087F24782A8000D36A92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3825087D24782A8000D36A92 /* Main.storyboard */; };
 		3825088124782A8400D36A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3825088024782A8400D36A92 /* Assets.xcassets */; };
 		3825088424782A8400D36A92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3825088224782A8400D36A92 /* LaunchScreen.storyboard */; };
+		38C5487B247E220E00BC295B /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C5487A247E220E00BC295B /* ChartsViewController.swift */; };
+		5F8419F14D41A0802D9A0152 /* Pods_HitstogramApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931536A448A12F79B2F0F274 /* Pods_HitstogramApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2903F2CFB5251ED23EC9F589 /* Pods-HitstogramApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HitstogramApp.release.xcconfig"; path = "Target Support Files/Pods-HitstogramApp/Pods-HitstogramApp.release.xcconfig"; sourceTree = "<group>"; };
 		3825087424782A8000D36A92 /* HitstogramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitstogramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3825087724782A8000D36A92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3825087924782A8000D36A92 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		3825088024782A8400D36A92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3825088324782A8400D36A92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3825088524782A8400D36A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38C5487A247E220E00BC295B /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		4653B4A8A61462EAF4F0A0EE /* Pods-HitstogramApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HitstogramApp.debug.xcconfig"; path = "Target Support Files/Pods-HitstogramApp/Pods-HitstogramApp.debug.xcconfig"; sourceTree = "<group>"; };
+		931536A448A12F79B2F0F274 /* Pods_HitstogramApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HitstogramApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F8419F14D41A0802D9A0152 /* Pods_HitstogramApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BF0CC65C366875E14E9C97A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4653B4A8A61462EAF4F0A0EE /* Pods-HitstogramApp.debug.xcconfig */,
+				2903F2CFB5251ED23EC9F589 /* Pods-HitstogramApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3825086B24782A8000D36A92 = {
 			isa = PBXGroup;
 			children = (
 				3825087624782A8000D36A92 /* HitstogramApp */,
 				3825087524782A8000D36A92 /* Products */,
+				1BF0CC65C366875E14E9C97A /* Pods */,
+				ACCAF3EFC34EADCDB098DB92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +82,17 @@
 				3825088024782A8400D36A92 /* Assets.xcassets */,
 				3825088224782A8400D36A92 /* LaunchScreen.storyboard */,
 				3825088524782A8400D36A92 /* Info.plist */,
+				38C5487A247E220E00BC295B /* ChartsViewController.swift */,
 			);
 			path = HitstogramApp;
+			sourceTree = "<group>";
+		};
+		ACCAF3EFC34EADCDB098DB92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				931536A448A12F79B2F0F274 /* Pods_HitstogramApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3825088824782A8400D36A92 /* Build configuration list for PBXNativeTarget "HitstogramApp" */;
 			buildPhases = (
+				572A8A5F32E0FAB181EDA403 /* [CP] Check Pods Manifest.lock */,
 				3825087024782A8000D36A92 /* Sources */,
 				3825087124782A8000D36A92 /* Frameworks */,
 				3825087224782A8000D36A92 /* Resources */,
+				7668F1A8332E3F7A9CDB983C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +163,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		572A8A5F32E0FAB181EDA403 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HitstogramApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7668F1A8332E3F7A9CDB983C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HitstogramApp/Pods-HitstogramApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HitstogramApp/Pods-HitstogramApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HitstogramApp/Pods-HitstogramApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3825087024782A8000D36A92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3825087C24782A8000D36A92 /* ViewController.swift in Sources */,
+				38C5487B247E220E00BC295B /* ChartsViewController.swift in Sources */,
 				3825087824782A8000D36A92 /* AppDelegate.swift in Sources */,
 				3825087A24782A8000D36A92 /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +355,7 @@
 		};
 		3825088924782A8400D36A92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4653B4A8A61462EAF4F0A0EE /* Pods-HitstogramApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +374,7 @@
 		};
 		3825088A24782A8400D36A92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2903F2CFB5251ED23EC9F589 /* Pods-HitstogramApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

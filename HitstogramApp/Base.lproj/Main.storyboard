@@ -10,22 +10,27 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HitstogramApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MjC-VL-7LO">
-                                <rect key="frame" x="30" y="30" width="315" height="457"/>
+                                <rect key="frame" x="30" y="30" width="315" height="467"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cde-2s-n2D">
                                 <rect key="frame" x="30" y="597" width="315" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="写真を取り消す"/>
+                                <connections>
+                                    <action selector="deleteButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aLl-fx-dgn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDd-Kk-Xip">
                                 <rect key="frame" x="30" y="537" width="315" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="写真を選択"/>
+                                <connections>
+                                    <action selector="selectButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jaO-wX-7hS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -33,7 +38,7 @@
                             <constraint firstItem="cde-2s-n2D" firstAttribute="top" secondItem="WDd-Kk-Xip" secondAttribute="bottom" constant="30" id="2Pz-zu-Z67"/>
                             <constraint firstItem="cde-2s-n2D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="GA6-ga-MTB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MjC-VL-7LO" secondAttribute="trailing" constant="30" id="IQB-l2-afS"/>
-                            <constraint firstItem="WDd-Kk-Xip" firstAttribute="top" secondItem="MjC-VL-7LO" secondAttribute="bottom" constant="50" id="K3g-of-H6d"/>
+                            <constraint firstItem="WDd-Kk-Xip" firstAttribute="top" secondItem="MjC-VL-7LO" secondAttribute="bottom" constant="40" id="K3g-of-H6d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cde-2s-n2D" secondAttribute="trailing" constant="30" id="Kfv-K2-KgW"/>
                             <constraint firstItem="MjC-VL-7LO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ODg-Of-HNe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WDd-Kk-Xip" secondAttribute="trailing" constant="30" id="OMI-dl-ufw"/>
@@ -44,20 +49,33 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="pictureImage" destination="MjC-VL-7LO" id="WBf-Bs-vCI"/>
                         <segue destination="1OS-Yb-acg" kind="showDetail" identifier="MakingHistogram" id="Qxc-SV-BQP"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="264.80000000000001" y="137.18140929535232"/>
         </scene>
-        <!--View Controller-->
+        <!--Charts View Controller-->
         <scene sceneID="Y0B-Fb-gP0">
             <objects>
-                <viewController id="1OS-Yb-acg" sceneMemberID="viewController">
+                <viewController id="1OS-Yb-acg" customClass="ChartsViewController" customModule="HitstogramApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hn9-lO-BIl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGO-is-J7O">
+                                <rect key="frame" x="30" y="577" width="315" height="30"/>
+                                <state key="normal" title="写真選択に戻る"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tGO-is-J7O" firstAttribute="leading" secondItem="8GZ-s3-Vdx" secondAttribute="leading" constant="30" id="RWB-Q7-BHF"/>
+                            <constraint firstItem="8GZ-s3-Vdx" firstAttribute="trailing" secondItem="tGO-is-J7O" secondAttribute="trailing" constant="30" id="pxY-ep-1zo"/>
+                            <constraint firstItem="8GZ-s3-Vdx" firstAttribute="bottom" secondItem="tGO-is-J7O" secondAttribute="bottom" constant="40" id="yqK-sc-bf1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8GZ-s3-Vdx"/>
                     </view>
                 </viewController>
